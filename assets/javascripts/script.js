@@ -38,9 +38,12 @@ $( document ).ready(function() {
     $(wrap).addClass('navbar-collapse');
     $(wrap).append("<nav></nav>");
     var navbar = $(wrap).find('nav');
-    for (var i = 0; i < menuData.length; i++) {        
-        var menuText = $("<li></li>").html(menuData[i].text); 
-        $(navbar).append(menuText);
+
+    
+    for (var i = 0; i < menuData.length; i++) {       
+        var elem = $(navbar).append("<li></li>");
+        var menuText = $('<a></a>').html(menuData[i].text); 
+        $(elem).append(menuText);
     }
 
 });
