@@ -38,12 +38,17 @@ $( document ).ready(function() {
     $(wrap).addClass('navbar-collapse');
     $(wrap).append("<nav></nav>");
     var navbar = $(wrap).find('nav');
-
     
-    for (var i = 0; i < menuData.length; i++) {       
-        var elem = $(navbar).append("<li></li>");
-        var menuText = $('<a></a>').html(menuData[i].text); 
-        $(elem).append(menuText);
+    
+    for (var i = 0; i < menuData.length; i++) {
+//      $(navbar).append("<li></li>");
+//      var elem = $(navbar).find("li");
+        $(navbar).append('<li><a>' + menuData[i].text + '</a></li>');
+        var subMenu = $(navbar).find("li");
+        $(subMenu).append(menuData[i].items);
+        var subMenuLink = $(subMenu).find("a");
+        $(subMenuLink).attr('href', menuData[i].href);
+        console.log();
     }
 
 });
