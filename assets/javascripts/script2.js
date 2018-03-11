@@ -1,7 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+// значение span
+var voteCount = 10;
+// находим его по класу, он один - поэтому нулевой элемент массива
+var voteCountSpan = document.getElementsByClassName('vote_span')[0];
+// записываем в него значение и преобразуем его из числа в строку
+voteCountSpan.innerHTML = voteCount + '';
+/* пишем функцию обработчик которую назначим обработчиком события
+     event - в функцию обработчик браузер передаёт объект
+     в котором есть информация о событии а также ссылка на элемент
+     на котором событие сработало*/
+function counterClickHandler(event) {
+    // находим 2 элемента - массив
+    var voteButtons = document.getElementsByClassName('vote_btn');
+    // ссылка на элемент, на котором сработало событие(в данном случае - кнопка - или +)
+    var buttonClicked = event.target;
+    // получаем атрибут с кнопки на которую нажали
+    var counterDifference = buttonClicked.getAttribute('data-count');
+    // приводим значение атрибута data-count к числу
+    counterDifference = parseInt(counterDifference, 10);
+    // +1 или -1 от значения span
+    voteCount += counterDifference;
+    // записываем новое значение в span в виде строки
+    voteCountSpan.innerHTML = voteCount + '';
+    // перебираем кнопки
+    for (var i = 0; i < voteButtons.length; i++) {
+        var btn = voteButtons[i];
+        // удаляем событие с каждой кнопки чтобы мы не могли больше
+        // чем 1 раз проголосовать
+        btn.removeEventListener('click', counterClickHandler);
+        // добавляем атрибут кнопкам
+        btn.setAttribute('disabled', 'true');
+        btn.style.color = 'grey';
+    }
+}
 
-/** Объект события и ссылка на каком элементе оно сработало **/
+// находим 2 элемента - массив
+var voteButtons = document.getElementsByClassName('vote_btn');
+alert('Вы можете проголосовать только 1 раз!');
+for (var i = 0; i < voteButtons.length; i++) {
+    var button = voteButtons[i];
+// вешаем обработчик события по клику на каждую кнопку
+    button.addEventListener('click', counterClickHandler);
+}
+
+
+
+/*
+alert('Вы можете проголосовать только один раз !');
+var voter = document.getElementById('voter');
+var voterMinus = voter.firstChild;
+var voterPlus = voter.lastChild;
+var value = document.getElementsByClassName('vote_span');
+
+voterMinus.addEventListener('click', function () {debugger;
+	value.innerHTML = value-1;
+//	console.log(event.target.classList.toggle('minus'));
+//	event.target.setAttribute("disable", "disable");
+});
+voterPlus.addEventListener('click', function () {
+	event = value+1;
+//	console.log(event.target.classList.toggle('plus'));
+	event.target.setAttribute("disable", "disable");
+});
+*/
+
+/*
+ Объект события и ссылка на каком элементе оно сработало 
     var btnAddClass = document.getElementById('bdnAddClass');
     // назначили по клику обработчик события
     // браузер в обработчик события всегда передаёт объект события
@@ -14,8 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(event.target.classList.toggle('myClass'));
     });
 
+// Передаём объект события в свою функцию
+    var btnAddClass = document.getElementById('btnAddClass');
+    function eventTargetHandler(event) {
+        console.log(event.target);
+    }
+    btnAddClass.addEventListener('click', eventTargetHandler);
 
-
+*/
 /*
 //добавляем анимацию в событие 
 button.btnAddClass {

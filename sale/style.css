@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 60px 0 0 0;
+}
+nav {
+    padding: 15px;
+}
+nav a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: #666;
+    border: 1px solid #333;
+    margin-right: 10px;
+    padding: 5px 10px;
+    /* сдвиг-х, сдвиг-у, ширина размытия, ширина тени */
+    box-shadow: 2px 2px 5px 1px #333;
+}
+.button-standart-small {
+    color: white;
+    background-color: #666;
+    border: none;
+    height: 2em;
+    min-width: 10em;
+    padding: .5em;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 30px;
+}
+.span-class {
+    color: red;
+}
+.divMargin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.listMenuItem {
+    color: white;
+    background-color: #666;
+    border: 1px solid #333;
+    min-height: 1.5em;
+    padding: 1em;
+    text-align: center;
+}
+.listMenuItem:hover {
+    background-color: #333;
+    border: 1px solid orangered;
+    color: orangered;
+}
+table {
+    border-collapse: collapse;
+}
+table tr td {
+    border: 2px solid blue;
+}
+ul {
+    display: block;
+    background: #ccc;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 20px 0;
+}
+ul > li {
+    float: left;
+    /*padding: 0 20px;*/
+    list-style: none;
+}
+ul > li > a {
+    text-decoration: none;
+}
+ul > li > a:hover {
+    color: red;
+}
+div.bottom {
+    padding: 3%;
+    opacity: 0.8;
+    border-top: 1px solid #000;
+}
+span.date {
+    float: right;
+}
+a.top {
+    opacity: 0.8;
+    border-bottom: 1px solid #000;
+    display: block;
+    widows: 94%;
+    padding: 3%;
+    background-color: #ccc;
+}
+li.list-item {
+    height: 250px;
+    width: 31%;
+    margin: 1%;
+    position: relative;
+    border: 1px solid #000;
+}
+header.header {
+    text-align: center;
+    font-size: 50px;
+}
+table.tb {
+    width: 500px;
+    margin: 40px auto;
+}
+table.tb > tr > td {
+    text-align: center;
+}
+table.tb > tr > th {
+    font-size: 16px;
+    text-transform: uppercase;
+}
