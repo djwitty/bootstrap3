@@ -1,0 +1,162 @@
+/*my styles*/
+
+html, body {
+    margin: 0;
+}
+form {
+    background-color: green;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    cursor: pointer;
+}
+div.demo {
+    background-color: blue;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+}
+p {
+    background-color: red;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.popup-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 5, .6);
+}
+.popup-container {
+    background-color: white;
+    position: relative;
+    min-height: 15em;
+/*    min-width: 25%;
+    max-width: 75%;*/
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+.popup-header {
+    background-color: royalblue;
+    min-height: 2em;
+    font-size: 1.5em;
+    padding-top: 0.4em;
+    padding-left: 0.3em;
+}
+.popup-content {
+    padding-top: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
+    display: flex;
+    flex-grow: 100;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btnOk {
+    background-color: royalblue;
+    min-width: 5em;
+    padding: 0.5em;
+}
+.btnContainer {
+    text-align: center;
+}
+
+
+.mat-form-field {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.mat-form-field label {
+    position: absolute;
+    font-size: 1.3em;
+}
+.mat-form-field label.move {
+    transform: translateY(-1.5em);
+    font-size: 1em;
+    transition: all .5s linear;
+    /*-webkit-animation: mymove 2s ease; /* Safari 4.0 - 8.0 */
+    /*animation: mymove 2s ease;*/
+}
+.mat-form-field input {
+    border: 0 none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 1.3em;
+}
+
+/* Safari 4.0 - 8.0 */
+/*@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: -25px;}
+}
+
+/* Standard syntax */
+/*@keyframes mymove {
+    from {top: 0px;}
+    to {top: -25px;}
+}
+*/
+/*
+.popup-wrapper {
+    position: absolute;
+    border: 10px dotted #ccc;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    margin-left: -150px;
+}
+.btnContainer {
+    position: relative;
+}
+.btnOk {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+}
+
+
+#messages-container {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 0.5em;
+    padding-right: 0.2em;
+}
+#messages-container .message {
+    width: 20em;
+    min-height: 5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5px;
+    animation: fade-in .5s linear;
+}
+.message span {
+    padding: 5px;
+    display: inline-block;
+}
+*/
